@@ -1,0 +1,733 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Leo Watches</title>
+    <meta name="description" content="Shop powered by PrestaShop" />
+    <meta name="generator" content="PrestaShop" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="~/Images/title/favicon.ico" />
+
+
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/autoload/uniform.default.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/js/jquery/plugins/fancybox/jquery.fancybox.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/product_list.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/blockcart/blockcart.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/js/jquery/plugins/bxslider/jquery.bxslider.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/blockcategories/blockcategories.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/blocknewsletter/blocknewsletter.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/blocksearch/blocksearch.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/js/jquery/plugins/autocomplete/jquery.autocomplete.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/leomanagewidgets/assets/styles.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/modules/leomanagewidgets/assets/owl-carousel/owl.carousel.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/modules/leomanagewidgets/assets/owl-carousel/owl.theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/modules/leomanagewidgets/assets/admin/animate.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/leosliderlayer/css/typo.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/modules/themeconfigurator/css/hooks.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/blockleoblogs/blockleoblogs.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/modules/blockleoblogs/views/css/blogcarousel.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/blockgrouptop/blockgrouptop.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/blockuserinfo/blockuserinfo.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/productcomments/productcomments.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/leocustomajax/leocustomajax.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/leobootstrapmenu/megamenu.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/leomenusidebar/leomenusidebar.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/modules/leoblog/views/css/leoblog.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/modules/blockwishlist/blockwishlist.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/paneltool.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/modules/leotempcp/assets/admin/colorpicker/css/colorpicker.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/responsive.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/Template/prestashop/themes/leo_watches/css/customize/test33.css" type="text/css" media="all" />
+    <script type="text/javascript">
+        var CUSTOMIZE_TEXTFIELD = 1;
+        var FancyboxI18nClose = 'Close';
+        var FancyboxI18nNext = 'Next';
+        var FancyboxI18nPrev = 'Previous';
+        var added_to_wishlist = 'The product was successfully added to your wishlist.';
+        var ajax_allowed = true;
+        var ajaxsearch = true;
+        var baseDir = 'http://localhost/prestashop/';
+        var baseUri = 'http://localhost/prestashop/';
+        var blocksearch_type = 'top';
+        var comparator_max_item = 3;
+        var comparedProductsIds = [];
+        var contentOnly = false;
+        var currency = { "id": 1, "name": "Dollar", "iso_code": "USD", "iso_code_num": "840", "sign": "$", "blank": "0", "conversion_rate": "1.000000", "deleted": "0", "format": "1", "decimals": "1", "active": "1", "prefix": "$ ", "suffix": "", "id_shop_list": null, "force_id": false };
+        var currencyBlank = 0;
+        var currencyFormat = 1;
+        var currencyRate = 1;
+        var currencySign = '$';
+        var customizationIdMessage = 'Customization #';
+        var delete_txt = 'Delete';
+        var displayList = false;
+        var freeProductTranslation = 'Free!';
+        var freeShippingTranslation = 'Free shipping!';
+        var generated_date = 1471841469;
+        var hasDeliveryAddress = false;
+        var highDPI = false;
+        var id_lang = 1;
+        var img_dir = 'http://localhost/prestashop/themes/leo_watches/img/';
+        var instantsearch = false;
+        var isGuest = 0;
+        var isLogged = 0;
+        var isMobile = false;
+        var loggin_required = 'You must be logged in to manage your wishlist.';
+        var max_item = 'You cannot add more than 3 product(s) to the product comparison';
+        var min_item = 'Please select at least one product';
+        var mywishlist_url = 'login8a75.html';
+        var page_name = 'index';
+        var placeholder_blocknewsletter = 'Enter your e-mail';
+        var priceDisplayMethod = 1;
+        var priceDisplayPrecision = 2;
+        var quickView = true;
+        var removingLinkText = 'remove this product from my cart';
+        var roundMode = 2;
+        var search_url = 'search.html';
+        var static_token = 'e6c25c11e72fdbd541104f8141b91013';
+        var toBeDetermined = 'To be determined';
+        var token = 'f8f56ae6a5236821f9480f9ca1bb8411';
+        var usingSecureMode = false;
+        var wishlistProductsIds = false;
+    </script>
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/plugins/jquery.easing.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/tools.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/global.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/autoload/10-bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/autoload/15-jquery.total-storage.min.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/autoload/15-jquery.uniform-modified.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/plugins/fancybox/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/products-comparison.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/modules/blockcart/ajax-cart.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/plugins/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/plugins/jquery.serialScroll.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/plugins/bxslider/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/tools/treeManagement.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/modules/blocknewsletter/blocknewsletter.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/plugins/autocomplete/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/modules/blocksearch/blocksearch.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leomanagewidgets/assets/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leomanagewidgets/assets/script.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leomanagewidgets/assets/admin/waypoints.min.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leosliderlayer/js/jquery.themepunch.enablelog.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leosliderlayer/js/jquery.themepunch.revolution.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leosliderlayer/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leocustomajax/leocustomajax.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/modules/blockwishlist/js/ajax-wishlist.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/js/jquery/plugins/jquery.cooki-plugin.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leotempcp/assets/admin/colorpicker/js/colorpicker.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/modules/leotempcp/assets/admin/paneltool.js"></script>
+    <script type="text/javascript" src="~/Template/prestashop/themes/leo_watches/js/index.js"></script>
+
+    <script type="text/javascript">
+        var leoOption = {
+            productNumber: 0,
+            productInfo: 0,
+            productTran: 1,
+            productCdown: 0,
+            productColor: 0,
+        }
+        $(document).ready(function () {
+            var leoCustomAjax = new $.LeoCustomAjax();
+            leoCustomAjax.processAjax();
+        });
+    </script>
+    <style>
+
+        @@media (min-width: 100px) {
+            #search_block_top
+            {
+                display:none;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <section id="page" data-column="col-xs-12 col-sm-6 col-md-3" data-type="grid">
+        <!-- Header -->
+        <header id="header">
+            <section class="header-container">
+                <div id="topbar">
+                    <span class="bt-menu-trigger hidden-xs"><span>Menu</span></span>
+                    <div class="container">
+                   
+                        <div class="inner">
+                            <nav class="clearfix">
+                                <div class="topbar-box"><a href="blog.html">Blog</a></div>
+                                <!-- Block user information module NAV  -->
+                                <ul id="header_user_info" class="pull-left">
+                                    <li class="login"><a href="loginfd9a.html" rel="nofollow" title="Login to your customer account">Sign in
+                                    </a></li>
+                                    <li class="register"><a href="loginfd9a.html" rel="nofollow" title="register">Register
+                                    </a></li>
+                                </ul>
+                               
+                               
+                              
+                               
+                                <!-- #layer_cart -->
+                                <div class="layer_cart_overlay"></div>
+
+                                <!-- /MODULE Block cart -->
+                                <!-- Block search module TOP -->
+                              @*  <div id="search_block_top">
+
+                                    <form id="searchbox" method="get" action="http://localhost/prestashop/en/search">
+                                        <input type="hidden" name="controller" value="search" />
+                                        <input type="hidden" name="orderby" value="position" />
+                                        <input type="hidden" name="orderway" value="desc" />
+                                        <input class="search_query form-control" type="text" id="search_query_top" name="search_query" placeholder="Search" value="" />
+                                        <button type="submit" name="submit_search" class="btn fa fa-search">&nbsp;</button>
+                                    </form>
+                                </div>*@
+                                <!-- /Block search module TOP -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="header-main" class="header-left">
+                    <div class="container">
+                        <div class="inner clearfix">
+                            <div class="col-md-4">
+                                 <div id="header_logo" >
+                                <a href="~/Home/Index" title="Leo Watches">
+                                    <img class="logo img-responsive" src="http://demo4leotheme.com/prestashop/leo_fitness_stone_demo/img/leo-watches-1415956717-1.jpg" alt="Leo Watches" width="160" height="37">
+                                </a>
+                            </div>
+                            </div>
+                            <div class="col-md-8" style="padding-top: 20px;">
+                                <div class="type-1" >
+
+                                <div class="row">
+
+                                    <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sp-12 carousel animation_col_89 animated flipInY" style="animation-delay: 0.3s;">
+                                        <div id="leo-megamenu" class="clearfix">
+                                            <nav id="cavas_menu" class="sf-contener leo-megamenu">
+                                                <div class="" role="navigation">
+                                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                                    <div class="navbar-header">
+                                                        <button type="button" class="navbar-toggle btn-outline-inverse" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                                            <span class="sr-only">Toggle navigation</span>
+                                                            <span class="fa fa-bars"></span>
+                                                        </button>
+                                                    </div>
+                                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                                    <div id="leo-top-menu" class="collapse navbar-collapse navbar-ex1-collapse">
+                                                        <ul class="nav navbar-nav megamenu">
+                                                            <li class="active">
+                                                                <a href="~/Home/Index" target="_self" class="has-category"><span class="menu-title">Home</span></a></li>
+                                                             <li>
+                                                                <a href="~/Home/Product" target="_self" class="has-category"><span class="menu-title">Product</span></a></li>
+                                                            <li>
+                                                                <a href="~/Home/Warranty" target="_self" class="has-category"><span class="menu-title">Warranty</span></a></li>
+                                                             <li>
+                                                                <a href="~/Home/About" target="_self" class="has-category"><span class="menu-title">About Us</span></a></li>
+                                                                                                                     
+                                                            <li class="">
+                                                                <a href="~/Home/Contact" target="_self" class="has-category"><span class="menu-title">Contact us</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </nav>
+                                        </div>
+
+                                      
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="widget col-lg-3 col-md-6 col-sm-6 col-xs-6 col-sp-12">
+                                        <div id="leo-verticalmenu" class="leo-verticalmenu highlighted block float-vertical float-vertical-left">
+                                            <h4 class="title_block float-vertical-button">Categories<span class="btn-toggle-menu"><i class="fa fa-bars"></i></span></h4>
+                                            <span class="bt-menu-trigger hidden-xs"><span>Menu</span></span>
+                                            <div id="header_logo_sidebar">
+                                                <a href="#" title="Leo Watches">
+                                                    <img class="logo img-responsive" src="../img/leo-watches-1415956717-1.jpg" alt="Leo Watches" width="160" height="37" />
+                                                </a>
+                                            </div>
+                                            <div id="left_column" class="box-content block_content">
+                                                <div id="verticalmenu" class="verticalmenu" role="navigation">
+                                                    <ul class="nav navbar-nav megamenu left">
+                                                        <li class="active">
+                                                                <a href="~/Home/Index" target="_self" class="has-category"><span class="menu-title">Home</span></a></li>
+                                                             <li>
+                                                                <a href="~/Home/Product" target="_self" class="has-category"><span class="menu-title">Product</span></a></li>
+                                                            <li>
+                                                                <a href="~/Home/Warranty" target="_self" class="has-category"><span class="menu-title">Warranty</span></a></li>
+                                                             <li>
+                                                                <a href="~/Home/About" target="_self" class="has-category"><span class="menu-title">About Us</span></a></li>
+                                                                                                                     
+                                                            <li class="">
+                                                                <a href="~/Home/Contact" target="_self" class="has-category"><span class="menu-title">Contact us</span></a></li>
+                                                        </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            $(document).ready(function () {
+                                                $('#leo-verticalmenu .dropdown-toggle').removeAttr("disabled");
+                                                $(".dropdown-toggle").click(function () {
+                                                    if ($(window).width() <= 767) {
+                                                        if ($(this).parent("li").find("div:first").hasClass("level2"))
+                                                            return false;
+                                                        else
+                                                            return true;
+                                                    }
+                                                });
+                                            });
+
+                                        </script>
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                            </div>
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </section>
+        </header>
+        <!-- /.container-fluid -->
+    </section>
+
+
+
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+ 
+    <footer id="footer" class="footer-container">
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="inner">
+
+                    <div class="row">
+
+                        <div class="widget col-lg-3 col-md-6 col-sm-6 col-xs-12 col-sp-12">
+                            <div class="widget-html block">
+                                <div class="block_content">
+                                    <div class="about">
+                                        <a href="#">
+                                            <img class="img-responsive" src="~/Template/prestashop/themes/leo_watches/img/modules/leomanagewidgets/logo.png" alt="" /></a>
+                                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat</p>
+                                        <p>Lipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget col-lg-2 col-md-6 col-sm-6 col-xs-12 col-sp-12">
+                            <div id="social_block" class="block footer-block">
+                                <h4 class="title_block">Get social</h4>
+                                <ul>
+                                    <li class="facebook">
+                                        <a target="_blank" href="http://www.facebook.com/prestashop" class="btn-tooltip" data-original-title="Facebook">
+                                            <span>Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a target="_blank" href="http://www.twitter.com/prestashop" class="btn-tooltip" data-original-title="Twitter">
+                                            <span>Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li class="rss">
+                                        <a target="_blank" href="http://www.prestashop.com/blog/en/" class="btn-tooltip" data-original-title="RSS">
+                                            <span>RSS</span>
+                                        </a>
+                                    </li>
+                                    <li class="youtube">
+                                        <a target="_blank" href="https://www.youtube.com/" class="btn-tooltip" data-original-title="Youtube">
+                                            <span>Youtube</span>
+                                        </a>
+                                    </li>
+                                    <li class="google-plus">
+                                        <a target="_blank" href="https://www.google.com/+prestashop" class="btn-tooltip" data-original-title="Google Plus" rel="publisher">
+                                            <span>Google Plus</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="widget col-lg-2 col-md-6 col-sm-6 col-xs-12 col-sp-12">
+
+                            <!-- Block CMS module footer -->
+                            <div class="footer-block block" id="block_various_links_footer">
+                                <h4 class="title_block">Information</h4>
+                                <ul class="toggle-footer list-group bullet">
+                                    <li class="item">
+                                        <a href="prices-drop.html" title="Specials">Specials
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="new-products.html" title="New products">New products
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="best-sales.html" title="Best sellers">Best sellers
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="stores.html" title="Our stores">Our stores
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="content/4-about-us.html" title="About us">About us
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <!-- /Block CMS module footer -->
+                        </div>
+                        <div class="widget col-lg-2 col-md-6 col-sm-6 col-xs-12 col-sp-12">
+                            <div class="widget-links block footer-block">
+                                <h4 class="title_block">Help & More
+                                </h4>
+                                <div class="block_content">
+                                    <div id="tabs3196" class="panel-group">
+                                        <ul class="nav-links toggle-footer list-group bullet">
+
+                                            <li><a href="#link1">Returns</a></li>
+
+                                            <li><a href="#link2">F.A.Q</a></li>
+
+                                            <li><a href="#link3">Shipping Policy</a></li>
+
+                                            <li><a href="#link4">Search Terms</a></li>
+
+                                            <li><a href="#link5">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="widget col-lg-3 col-md-6 col-sm-6 col-xs-12 col-sp-12">
+                            <div class="widget-html block">
+                                <h4 class="title_block">Contact
+                                </h4>
+                                <div class="block_content">
+                                    <ul class="contact-us ileft">
+                                        <li><span class="icon-box image"><em class="fa fa-home">&nbsp; </em></span>
+                                            <p>No 1104 Sky Tower, Las Vegas, USA .</p>
+                                        </li>
+                                        <li><span class="icon-box image"><em class="fa fa-phone">&nbsp; </em></span>
+                                            <p>Phone: +84 (0) 123456789</p>
+                                        </li>
+                                        <li><span class="icon-box image"><em class="fa fa-envelope">&nbsp; </em></span>
+                                            <p>Mail: support@support.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row footer-bottom fs-style">
+
+                        <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sp-12">
+                            <div class="widget-html block">
+                                <div class="block_content">
+                                    <ul class="menu-bottom">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">APPETIZERS</a></li>
+                                        <li><a href="#">Fruits/Vegetables</a></li>
+                                        <li><a href="#">Live smart </a></li>
+                                        <li><a href="#">Pizza/Pasta</a></li>
+                                        <li><a href="#">SEAFOOD</a></li>
+                                    </ul>
+                                    <div class="copyright">Copyright &copy; 2014 - store. All rights reserved.Powered by leotheme.</div>
+                                    <div class="paypal">
+                                        <a href="#">
+                                            <img class="img-responsive" src="~/Template/prestashop/themes/leo_watches/img/modules/leomanagewidgets/paypal.png" alt="01" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type='text/javascript'>
+                        $(document).ready(function () {
+                            $(".animation_col_7").waypoint(function () {
+                                $(this).addClass("animated flipInY");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_11").waypoint(function () {
+                                $(this).addClass("animated fadeInLeft");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_12").waypoint(function () {
+                                $(this).addClass("animated fadeInUp");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_13").waypoint(function () {
+                                $(this).addClass("animated fadeInRight");
+                                $(this).css("animation-delay", "1s");
+                                $(this).css("-webkit-animation-delay", "1s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_14").waypoint(function () {
+                                $(this).addClass("animated fadeInUp");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_15").waypoint(function () {
+                                $(this).addClass("animated fadeInLeft");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_16").waypoint(function () {
+                                $(this).addClass("animated fadeInRight");
+                                $(this).css("animation-delay", "1s");
+                                $(this).css("-webkit-animation-delay", "1s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_17").waypoint(function () {
+                                $(this).addClass("animated zoomIn");
+                                $(this).css("animation-delay", "1.5s");
+                                $(this).css("-webkit-animation-delay", "1.5s");
+                            }, { offset: "90%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_21").waypoint(function () {
+                                $(this).addClass("animated zoomIn");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_59").waypoint(function () {
+                                $(this).addClass("animated flipInY");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_60").waypoint(function () {
+                                $(this).addClass("animated fadeInLeft");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_61").waypoint(function () {
+                                $(this).addClass("animated fadeInUp");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_62").waypoint(function () {
+                                $(this).addClass("animated fadeInRight");
+                                $(this).css("animation-delay", "1s");
+                                $(this).css("-webkit-animation-delay", "1s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_63").waypoint(function () {
+                                $(this).addClass("animated fadeInUp");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_64").waypoint(function () {
+                                $(this).addClass("animated fadeInLeft");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_65").waypoint(function () {
+                                $(this).addClass("animated fadeInRight");
+                                $(this).css("animation-delay", "1s");
+                                $(this).css("-webkit-animation-delay", "1s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_66").waypoint(function () {
+                                $(this).addClass("animated zoomIn");
+                                $(this).css("animation-delay", "1.5s");
+                                $(this).css("-webkit-animation-delay", "1.5s");
+                            }, { offset: "90%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_67").waypoint(function () {
+                                $(this).addClass("animated zoomIn");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_74").waypoint(function () {
+                                $(this).addClass("animated flipInY");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_75").waypoint(function () {
+                                $(this).addClass("animated fadeInLeft");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_76").waypoint(function () {
+                                $(this).addClass("animated fadeInUp");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_77").waypoint(function () {
+                                $(this).addClass("animated fadeInRight");
+                                $(this).css("animation-delay", "1s");
+                                $(this).css("-webkit-animation-delay", "1s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_78").waypoint(function () {
+                                $(this).addClass("animated fadeInUp");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_79").waypoint(function () {
+                                $(this).addClass("animated fadeInLeft");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_80").waypoint(function () {
+                                $(this).addClass("animated fadeInRight");
+                                $(this).css("animation-delay", "1s");
+                                $(this).css("-webkit-animation-delay", "1s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_81").waypoint(function () {
+                                $(this).addClass("animated zoomIn");
+                                $(this).css("animation-delay", "1.5s");
+                                $(this).css("-webkit-animation-delay", "1.5s");
+                            }, { offset: "90%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_82").waypoint(function () {
+                                $(this).addClass("animated zoomIn");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_89").waypoint(function () {
+                                $(this).addClass("animated flipInY");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_90").waypoint(function () {
+                                $(this).addClass("animated fadeInLeft");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_91").waypoint(function () {
+                                $(this).addClass("animated fadeInUp");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_92").waypoint(function () {
+                                $(this).addClass("animated fadeInRight");
+                                $(this).css("animation-delay", "1s");
+                                $(this).css("-webkit-animation-delay", "1s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_93").waypoint(function () {
+                                $(this).addClass("animated fadeInUp");
+                                $(this).css("animation-delay", "0.3s");
+                                $(this).css("-webkit-animation-delay", "0.3s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_94").waypoint(function () {
+                                $(this).addClass("animated fadeInLeft");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "70%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_95").waypoint(function () {
+                                $(this).addClass("animated fadeInRight");
+                                $(this).css("animation-delay", "1s");
+                                $(this).css("-webkit-animation-delay", "1s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_96").waypoint(function () {
+                                $(this).addClass("animated zoomIn");
+                                $(this).css("animation-delay", "1.5s");
+                                $(this).css("-webkit-animation-delay", "1.5s");
+                            }, { offset: "90%" });
+                        }); $(document).ready(function () {
+                            $(".animation_col_97").waypoint(function () {
+                                $(this).addClass("animated zoomIn");
+                                $(this).css("animation-delay", "0.5s");
+                                $(this).css("-webkit-animation-delay", "0.5s");
+                            }, { offset: "100%" });
+                        }); $(document).ready(function () {
+                            $("#page").css("overflow", "hidden");
+                        }); $(document).ready(function () {
+                            currentPosX = [];
+                            currentPosY = [];
+                            $("div[data-mouse-parallax-strength]").each(function () {
+                                currentPos = $(this).css("background-position");
+                                if (typeof currentPos == "string") {
+                                    currentPosArray = currentPos.split(" ");
+                                } else {
+                                    currentPosArray = [$(this).css("background-position-x"), $(this).css("background-position-y")];
+                                }
+                                currentPosX[$(this).data("mouse-parallax-rid")] = parseFloat(currentPosArray[0]);
+                                currentPosY[$(this).data("mouse-parallax-rid")] = parseFloat(currentPosArray[1]);
+                                $(this).mousemove(function (e) {
+                                    newPosX = currentPosX[$(this).data("mouse-parallax-rid")];
+                                    newPosY = currentPosY[$(this).data("mouse-parallax-rid")];
+                                    if ($(this).data("mouse-parallax-axis") != "axis-y") {
+                                        mparallaxPageX = e.pageX - $(this).offset().left;
+                                        if ($(this).hasClass("full-bg-screen")) {
+                                            mparallaxPageX = mparallaxPageX - 1000;
+                                        }
+                                        newPosX = (mparallaxPageX * $(this).data("mouse-parallax-strength") * -1) + newPosX;
+                                    }
+                                    if ($(this).data("mouse-parallax-axis") != "axis-x") {
+                                        mparallaxPageY = e.pageY - $(this).offset().top;
+                                        newPosY = mparallaxPageY * $(this).data("mouse-parallax-strength") * -1;
+                                    }
+                                    $(this).css("background-position", newPosX + "px " + newPosY + "px");
+                                });
+                            });
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    @*   <script src="~/Content/Boostrap/js/jquery.min.js"></script>
+    <script src="~/Content/Boostrap/js/bootstrap.min.js"></script>*@
+
+  @*  @Scripts.Render("~/bundles/jquery")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿@model Watch.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+<link href="~/Content/Login.css" rel="stylesheet" />
+
+
+
+<div class = "container">
+	<div class="wrapper">
+        <div class="form-signin">
+
+            @using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <h3 class="form-signin-heading">Welcome Back! Please Register</h3>
+			  <hr class="colorgraph"><br>
+        <ul>
+            <li>
+               
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control",placeholder ="UserName" })
+            </li>
+            <li>
+              
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control",placeholder ="Password" })
+            </li>
+            <li>
+               
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control",placeholder ="Confirm Password" })
+            </li>
+        </ul>
+   
+           <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Register" type="Submit">Register</button>         
+   
+}
+
+        </div>
+					
+	</div>
+</div>
+
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

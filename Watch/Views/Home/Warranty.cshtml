@@ -1,0 +1,160 @@
+﻿@model Watch.Models.WarrantyReg
+
+@{
+    ViewBag.Title = "Warranty";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#cancel").click(function () {
+            //alert("rtrt");
+            $("#Name").val("");
+            $("#Address").val("");
+            $("#ModelNo").val("");
+            $("#Dealer").val("");
+            $("#Country").val("");
+            $("#Date").val("");
+           
+
+            return false;
+        });
+
+        
+    });
+
+  @*  $(document).ready(function () {
+        var msg = ' @ViewBag.Error'
+        if (msg != undefined && msg != "") {
+            alert(msg);
+        }
+    });*@
+    $(document).ready(function () {
+        var msg = '@ViewBag.Message'
+        
+        if (msg != undefined && msg != "") {
+            
+            $("#Name").val("");
+            $("#Address").val("");
+            $("#ModelNo").val("");
+            $("#Dealer").val("");
+            $("#Country").val("");
+            $("#Date").val("");
+        }
+
+    });
+  </Script>
+
+<div id="breadcrumb" class="clearfix">
+    <div class="container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb clearfix">
+             <a class="home" href="~/Home/Index" title="Return to Home"> <span itemprop="title">Home</span></a>
+              >>
+            Warranty
+           
+        </div>
+        <!-- /Breadcrumb -->
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+
+    
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                      <h1 class="page-heading bottom-indent">Warranty Registration Form</h1>
+                    
+                </div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+
+
+                        <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="inputEmail">Name</label>
+                            </p>
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "Name" })
+
+                                @* <input id="Name" name="Name" class="form-control" type="text" placeholder="Name"*@
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="textArea">Address</label>
+                            </p>
+                            <div class="col-lg-10">
+                                @Html.TextAreaFor(model => model.Address, new { @class = "form-control", placeholder = "Address.." })
+
+                                @* <textarea id="Address" name="Address" class="form-control" rows="3" placeholder="Address.."></textarea>*@
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="inputEmail">Model No</label>
+                            </p>
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(model => model.ModelNo, new { @class = "form-control", placeholder = "Model No" })
+
+                                @* <input id="ModelNo" name="ModelNo" class="form-control" type="text" placeholder="Model No">*@
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="inputEmail">Dealer</label>
+                            </p>
+                            <div class="col-lg-10">
+                                @Html.TextBoxFor(model => model.Dealer, new { @class = "form-control", placeholder = "Dealer" })
+
+                                @*<input id="Dealer" name="Dealer" class="form-control" type="text" placeholder="Dealer">*@
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="inputEmail">Country</label>
+                            </p>
+                            <div class="col-lg-10">
+
+                                @Html.TextBoxFor(model => model.Country, new { @class = "form-control", placeholder = "Country" })
+
+                                @*  <input id="Country" name="Country" class="form-control" type="text" placeholder="Country">*@
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="inputEmail">Date</label>
+                            </p>
+                            <div class="col-md-3">
+                                <input id="Date" name="Date" class="form-control" type="date">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button class="btn btn-outline" id="cancel">Cancel</button>
+                                <button class="btn btn-outline" id="save" type="submit">Submit</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    
+        }
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

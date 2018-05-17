@@ -1,0 +1,76 @@
+﻿@model Watch.Models.LoginModel
+
+
+
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+<link href="~/Content/Login.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="wrapper">
+        <div class="form-signin">
+            @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+                <hr class="colorgraph">
+                <br>
+			  
+                <ul style="color:red">
+                    <li>
+                        
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control",placeholder ="UserName"  })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </li>
+                    <li>
+                       
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control",placeholder ="Password"  })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </li>
+                    <li>
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                       @* @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })*@
+                    </li>
+                </ul>
+                <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit">Login</button>@*  
+        <input type="submit" value="Log in" />*@
+    
+                <p>
+                    @Html.ActionLink("Register", "Register") if you don't have an account.
+                </p>
+            }
+
+            @*<form action="" method="post" name="Login_Form" class="form-signin">       
+		    <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+			  <hr class="colorgraph"><br>
+			  
+			  <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" />
+			  <input type="password" class="form-control" name="Password" placeholder="Password" required=""/>     		  
+			 
+			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>  			
+		</form>		*@
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@*<section id="loginForm">
+<h2>Use a local account to log in.</h2>
+
+</section>
+
+<section class="social" id="socialLoginForm">
+    <h2>Use another service to log in.</h2>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

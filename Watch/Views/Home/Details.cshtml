@@ -1,0 +1,318 @@
+﻿
+@model Watch.Models.ViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+
+<script type="text/javascript" src="~/Template/prestashop/js/jquery/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="~/Template/prestashop/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+
+        $imgsrc = $('#ImageGallery img').attr('src');
+        var bigImagePath = $imgsrc;
+        $('#bigImage').attr('src', bigImagePath);
+        $('#bigImage1').attr('src', bigImagePath);
+
+        var res = bigImagePath.substring(15,23);
+
+        document.getElementById("p1").innerHTML = res;
+        //document.getElementById("wid").innerHTML = res;
+        $("#wid").val(res);
+
+        $('#ImageGallery img').click(function () {
+            var bigImagePath = '/Images/upload/' + $(this).attr('alt');
+            var res = bigImagePath.substring(15, 23);
+            document.getElementById("p1").innerHTML = res;
+            $("#wid").val(res);
+            $('#bigImage').attr('src', bigImagePath);
+            $('#bigImage1').attr('src', bigImagePath);
+        });
+    });
+    $(document).ready(function () {
+        //jquery
+        $(location).attr('href');
+
+        //pure javascript
+        var pathname = window.location.pathname;
+
+        //url
+        var url = "http://g3solutions.lk/SingleProject.aspx?ProjectID=ydRRTTxkdt6Trx91pX1%2bcA%3d%3d"; //window.location;
+        
+        $('.fb-share-button').each(function () { // loop if there are more blocks
+            var oldDataHref = $(this).data('href'); // get the data-href of current "fb-comments"
+            var newDataHref = url; // make a new data-href
+            $(this).attr('data-href', newDataHref); // set the data-href here.
+        });
+
+        // to show it in an alert window
+        //alert(url);
+       
+    });
+
+
+   
+</script>
+<script>
+    
+    $(document).ready(function () {
+     //$('button').click(function () {
+        //document.getElementById("p1").innerHTML = "New text!";
+         //$('#pTest').text('test')
+     //})
+ });
+</script>
+
+<section id="columns" class="columns-container">
+    <div id="breadcrumb" class="clearfix">
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb clearfix">
+                <a class="home" href="~/Home/Index" title="Return to Home"><span itemprop="title">Home</span></a>
+                >>
+                Details
+            </div>
+            <!-- /Breadcrumb -->
+           
+         
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- Center -->
+            <section id="center_column" class="col-md-12">
+
+
+                <div class="primary_block row" itemscope="" >
+                    <meta itemprop="url" >
+                    <div class="container">
+                        <div class="top-hr"></div>
+                    </div>
+                    <!-- left infos-->
+                    <div class="col-md-6">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td width="150px" valign="top" align="center" style="border-right: 3px solid #EEEEEE">
+                                    <div id="ImageGallery" style="overflow: auto; height: 350px; width: 130px; display: inline-block;">
+                                        @foreach (var item in Model.vMainImage)
+                                        {
+                                   
+                                            <img id="item-display" class="replace-2x img-responsive" alt="@item.FileName@item.Extension" style="height:100px" src='~/Images/upload/@item.FileName@item.Extension' border="0" />
+                           
+                                        }
+                                        @foreach (var item in Model.vSubImages)
+                                        {
+                                   
+                                            <a id="item-1" class="service1-item">
+                                                <img width="100" class="replace-2x img-responsive" alt="@item.ImageName@item.Extension" style="height:100px" src='~/Images/upload/@item.ImageName@item.Extension' border="0" />
+                                            </a>
+                                    
+                                        }
+                                    </div>
+                                </td>
+                                <td valign="top" align="center">
+
+                                    <img id="bigImage" style="height: 450px; width: 450px" alt="" class="image-responsive" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="product clearfix  col-xs-12 col-sm-6">
+                        <p id="product">
+                            <label>Watch Id: </label>
+                        </p>
+                       @* <p id="p1"></p>*@
+                        <h1 id="p1"></h1>
+
+                        @foreach (var item in Model.vProduct)
+                        {
+                            
+                            
+                                
+                            <p id="product_reference">
+                                <label>Category: </label>
+                                <span class="editable" itemprop="sku" content="demo_6">@Html.DisplayFor(modelItem => item.Category)</span>
+                            </p>
+                            <p id="product_condition">
+                                <label>Description: </label>
+
+                                <span class="editable">@Html.DisplayFor(modelItem => item.Description)</span>
+                            </p>
+                            
+                        }
+
+                                <div class="fb-share-button" data-href="http://g3solutions.lk/SingleProject.aspx" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+                                    <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A20414%2FHome%2FDetails%2F4&amp;src=sdkpreparse">Share</a>
+
+                                </div>
+                        
+                         </div>
+
+                </div>
+                <!-- end primary_block -->
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('.more_info_block .page-product-heading li:first, .more_info_block .tab-content section:first').addClass('active');
+                    });
+                </script>
+                <ul class="nav nav-tabs tab-info page-product-heading">
+                    <li class="active"><a href="#tab2" data-toggle="tab">More info</a></li>
+                    <li><a href="#tab3" data-toggle="tab">Data sheet</a></li>
+                    <li><a id="link_idTab5" href="#idTab5" data-toggle="tab">Inquiry</a></li>
+
+
+                </ul>
+                <div class="tab-content">
+
+                    <!-- More info -->
+                    <section id="tab2" class="tab-pane page-product-box active">
+
+                        <!-- full description -->
+                        <div class="rte">
+                            <p>Fashion has been creating well-designed collections since 2010. The brand offers feminine designs delivering stylish separates and statement dresses which has since evolved into a full ready-to-wear collection in which every item is a vital part of a woman's wardrobe. The result? Cool, easy, chic looks with youthful elegance and unmistakable signature style. All the beautiful pieces are made in Italy and manufactured with the greatest attention. Now Fashion extends to a range of accessories including shoes, hats, belts and more!</p>
+                        </div>
+                    </section>
+                    <!--end  More info -->
+                    <!-- Data sheet -->
+                    <section id="tab3" class="tab-pane page-product-box">
+
+                        <table class="table-data-sheet">
+                            <tbody>
+                                <tr class="odd">
+
+                                    <td>Compositions</td>
+                                    <td>Polyester</td>
+                                </tr>
+                                <tr class="even">
+
+                                    <td>Styles</td>
+                                    <td>Girly</td>
+                                </tr>
+                                <tr class="odd">
+
+                                    <td>Properties</td>
+                                    <td>Short Dress</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <!--end Data sheet -->
+                    <!--HOOK_PRODUCT_TAB -->
+                    <section id="idTab5" class="tab-pane page-product-box">
+                        <div id="product_comments_block_tab">
+                            <div class="comment row" itemprop="review" itemscope="" itemtype="https://schema.org/Review">
+                            </div>
+                            <!-- .comment -->
+                            <p class="align_center">
+                                @* <a id="new_comment_tab_btn" class="btn btn-outline button button-small btn-sm open-comment-form" href="#new_comment_form">
+                                    <span>Write your review!</span>
+                                </a>*@
+                                <!-- Fancybox -->
+                                <div>
+                                    <div id="new_comment_form">
+                                      
+                                            <h2 class="page-subheading">Write a review
+                                            </h2>
+                                            <div class="row">
+                                                <div class="product clearfix  col-xs-12 col-sm-6">
+                                                    <div id="ImageGallery1">
+                                                    @*@foreach (var item in Model.vMainImage)
+                                                    {
+                                   
+                                                        <img id="item-display" class="replace-2x img-responsive" alt="@item.FileName@item.Extension" height="200" width="300" src='~/Images/upload/@item.FileName@item.Extension' border="0" />
+                           
+                                  
+                                                    }*@
+                                                        <img id="bigImage1" style="height: 450px; width: 450px" alt="" class="image-responsive" />
+                                                        </div>
+                                                    <div class="product_desc">
+                                                        <p class="product_name">
+                                                            <strong>Printed Summer Dress</strong>
+                                                        </p>
+                                                        <p>Sleeveless knee-length chiffon dress. V-neckline with elastic under the bust lining.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="new_comment_form_content col-xs-12 col-sm-6">
+                                                    <div id="new_comment_form_error" class="error" style="display: none; padding: 15px 25px">
+                                                        <ul></ul>
+                                                    </div>
+                                                   <form method="post">
+                                                    <label for="comment_title">
+                                                        Watch Id: <sup class="required">*</sup>
+                                                    </label>
+                                                    <input id="wid" name="wid" type="text" value="" readonly>
+
+                                                    <label for="comment_title">
+                                                        Name: <sup class="required">*</sup>
+                                                    </label>
+                                                    <input id="name" name="name" type="text" value="">
+
+                                                    <label for="comment_title">
+                                                        Email: <sup class="required">*</sup>
+                                                    </label>
+                                                    <input id="email" name="email" type="text" value="">
+
+                                                    <label for="content">
+                                                        Comment: <sup class="required">*</sup>
+                                                    </label>
+                                                    <textarea id="content" name="content"></textarea>
+                                                    
+                                                    <div id="new_comment_form_footer">
+                                                       @* <input id="id_product_comment_send" name="id_product" type="hidden" value="6">*@
+                                                        <p class="fl required"><sup>*</sup> Required fields</p>
+                                                        <p class="fr">
+                                                            <button id="submitNewMessage" name="submitMessage" type="submit" class="btn button button-small btn-sm">
+                                                                <span>Submit</span>
+                                                            </button>
+                                                            &nbsp;
+							or&nbsp;
+							<a class="closefb" href="#">Cancel
+                            </a>
+                                                        </p>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    </form>
+
+                                                    <!-- #new_comment_form_footer -->
+                                                </div>
+                                            </div>
+                                       
+                                        <!-- /end new_comment_form_content -->
+                                    </div>
+                                </div>
+                            </p>
+
+                        </div>
+                        <!-- #product_comments_block_tab -->
+                    </section>
+
+
+                    <!-- description & features -->
+                </div>
+                <br />
+                <br />
+
+               
+            </section>
+
+
+        </div>
+    </div>
+</section>
+

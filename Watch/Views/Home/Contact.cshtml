@@ -1,0 +1,101 @@
+﻿@{
+    //ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+    
+    
+}
+
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#cancel").click(function () {
+            //alert("rtrt");
+            $("#Name").val("");
+            $("#Address").val("");
+            $("#Email").val("");
+            return false;
+        });
+
+
+    });
+
+</script>
+<section id="columns" class="columns-container">
+    <div id="breadcrumb" class="clearfix">
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb clearfix">
+                  <a class="home" href="~/Home/Index" title="Return to Home"> <span itemprop="title">Home</span></a>
+              >>
+                Contact
+            </div>
+            <!-- /Breadcrumb -->
+        </div>
+    </div>
+
+
+    <div class="container">
+    <div class="row">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+
+    
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                     <h1 class="page-heading bottom-indent">Customer service - Contact us</h1>
+                </div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+
+                           <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="inputEmail">Name</label>
+                            </p>
+                            <div class="col-lg-10">
+                               
+
+                                 <input id="Name" name="Name" class="form-control" type="text" placeholder="Name">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="inputEmail">Email</label>
+                            </p>
+                            <div class="col-lg-10">
+                               
+
+                                 <input id="Email" name="Email" class="form-control" type="text" placeholder="Email">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            <p>
+                                <label class="col-lg-2 control-label" for="textArea">Address</label>
+                            </p>
+                            <div class="col-lg-10">
+                             
+
+                                 <textarea id="Address" name="Address" class="form-control" rows="3" placeholder="Address.."></textarea>
+
+                            </div>
+                        </div>
+                     
+
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button class="btn btn-outline" id="cancel">Cancel</button>
+                                <button class="btn btn-outline" id="save" type="submit">Send</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    
+        }
+    </div>
+</div>
+</section>

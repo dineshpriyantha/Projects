@@ -1,0 +1,678 @@
+﻿@model IEnumerable<Watch.Models.MainImage>
+
+@{
+    //ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+}
+
+<link href="~/Content/imagesSlider/textSlider.css" rel="stylesheet" />
+  <script>
+      $(document).ready(function () {
+          $("#leoproductcarousel962").owlCarousel({
+              items: 5,
+              singleItem: false,         // chỉ hiện thị 1 item
+              itemsScaleUp: false,       // true sẽ hiện thị giãn ảnh nếu diện tích còn thừa, và ẩn nếu độ rộng ko đủ
+              slideSpeed: 200,  // tốc độ trôi khi thả chuột, kéo 1 nửa rồi thả ra
+              paginationSpeed: 800, // tốc độ next page
+              rewindSpeed: 1000, // tốc độ tua lại về first item
+              autoPlay: 8000,   // thời gian show each item
+              stopOnHover: true,
+              navigation: false,
+              navigationText: ["&lsaquo;", "&rsaquo;"],
+              rewindNav: true, // enable, disable tua lại về first item
+              scrollPerPage: false,
+
+              pagination: false, // show bullist : nut tròn tròn
+              paginationNumbers: false, // đổi nut tròn tròn thành số
+
+              responsive: true,
+              //responsiveRefreshRate : 200,
+              //responsiveBaseWidth : window,
+
+              //baseClass : "owl-carousel",
+              //theme : "owl-theme",
+
+              lazyLoad: false,
+              lazyFollow: true,  // TRUE : nhảy vào page 7 load ảnh TỪ page 1->7. FALSE : nhảy vào page 7 CHỈ load ảnh page 7
+              lazyEffect: "fade",
+
+              autoHeight: false,
+
+              //jsonPath : false,
+              //jsonSuccess : false,
+
+              //dragBeforeAnimFinish
+              mouseDrag: true,
+              touchDrag: true,
+
+              addClassActive: true,
+              //transitionStyle : "owl_transitionStyle",
+
+              //beforeUpdate : false,
+              //afterUpdate : false,
+              //beforeInit : false,
+              //afterInit : false,
+              //beforeMove : false,
+              //afterMove : false,
+              //afterAction : false,
+              //startDragging : false,
+              //afterLazyLoad: false
+
+
+          });
+      });
+                            </script>
+<script type="text/javascript">
+    var leoOption = {
+        productNumber: 0,
+        productInfo: 0,
+        productTran: 1,
+        productCdown: 0,
+        productColor: 0,
+    }
+    $(document).ready(function () {
+        var leoCustomAjax = new $.LeoCustomAjax();
+        leoCustomAjax.processAjax();
+    });
+</script>
+<div id="slideshow" class="clearfix">
+    <div class="bannercontainer banner-fullwidth" style="padding: 0; margin: 0; background-color: #fff">
+        <div id="sliderlayer11304" class="rev_slider fullwidthbanner" style="width: 100%; height: 644px;">
+            <ul>
+
+                <li data-link="#" data-target="_self" data-masterspeed="300" data-transition="random" data-slotamount="7" data-thumb="Template/prestashop/themes/leo_watches/img/modules/leosliderlayer/slider.jpg">
+                    <img src="~/Template/prestashop/themes/leo_watches/img/modules/leosliderlayer/slider.jpg" alt="" />
+                    <div class="caption sfl easeOutExpo                        str"
+                        data-x="125"
+                        data-y="98"
+                        data-speed="550"
+                        data-start="400"
+                        data-easing="easeOutExpo">
+
+                        <img src="~/Template/prestashop/themes/leo_watches/img/modules/leosliderlayer/img-slider.png" alt="slider_1" />
+
+                    </div>
+                    <div class="caption dec-slier sfb easeOutQuad                        stb"
+                        data-x="480"
+                        data-y="191"
+                        data-speed="350"
+                        data-start="800"
+                        data-easing="easeOutExpo" style="font-size: 39px; color: #ffffff; z-index: 63;">
+                        nec 5326
+                         
+                    </div>
+                    <div class="caption dec-slier sfr easeOutQuad                        str"
+                        data-x="478"
+                        data-y="220"
+                        data-speed="350"
+                        data-start="1200"
+                        data-easing="easeOutExpo" style="font-size: 64px; color: #ffffff; z-index: 64;">
+                        kobold expedition
+                         
+                    </div>
+                    <div class="caption dec-slider sfr easeOutQuad                        "
+                        data-x="480"
+                        data-y="310"
+                        data-speed="350"
+                        data-start="1600"
+                        data-easing="easeOutExpo" style="font-size: 14px; color: #ffffff; z-index: 65;">
+
+
+                        <p>Praesent justo dolor, lobortis quis, lobortis dignissim</p>
+
+                    </div>
+                    <div class="caption btn-link sfr easeOutQuad                        stb"
+                        data-x="480"
+                        data-y="370"
+                        data-speed="550"
+                        data-start="2000"
+                        data-easing="easeOutExpo" onclick="window.open('#','_self');" style="font-size: 14px; background-color: #dfb655; color: #ffffff; z-index: 66;">
+                        See whats new!
+                         
+                    </div>
+                </li>
+
+                <li data-link="#" data-target="_self" data-masterspeed="300" data-transition="random" data-slotamount="7" data-thumb="../themes/leo_watches/img/modules/leosliderlayer/slider-3.jpg">
+                    <img src="~/Template/prestashop/themes/leo_watches/img/modules/leosliderlayer/slider-3.jpg" alt="" />
+                    <div class="caption sfl easeOutExpo                        str"
+                        data-x="125"
+                        data-y="98"
+                        data-speed="550"
+                        data-start="400"
+                        data-easing="easeOutExpo">
+
+                        <img src="~/Template/prestashop/themes/leo_watches/img/modules/leosliderlayer/img-slider.png" alt="slider_2" />
+
+                    </div>
+                    <div class="caption dec-slier sfb easeOutQuad                        stb"
+                        data-x="480"
+                        data-y="191"
+                        data-speed="350"
+                        data-start="800"
+                        data-easing="easeOutExpo" style="font-size: 39px; color: #ffffff; z-index: 68;">
+                        nec 5326
+                         
+                    </div>
+                    <div class="caption dec-slier sfr easeOutQuad                        str"
+                        data-x="478"
+                        data-y="220"
+                        data-speed="350"
+                        data-start="1200"
+                        data-easing="easeOutExpo" style="font-size: 64px; color: #ffffff; z-index: 69;">
+                        kobold expedition
+                         
+                    </div>
+                    <div class="caption dec-slider sfr easeOutQuad                        "
+                        data-x="480"
+                        data-y="310"
+                        data-speed="350"
+                        data-start="1600"
+                        data-easing="easeOutExpo" style="font-size: 14px; color: #ffffff; z-index: 70;">
+
+
+                        <p>Praesent justo dolor, lobortis quis, lobortis dignissim</p>
+
+                    </div>
+                    <div class="caption btn-link sfr easeOutQuad                        stb"
+                        data-x="480"
+                        data-y="370"
+                        data-speed="550"
+                        data-start="2000"
+                        data-easing="easeOutExpo" onclick="window.open('#','_self');" style="font-size: 14px; background-color: #dfb655; color: #ffffff; z-index: 71;">
+                        See whats new!
+                         
+                    </div>
+                </li>
+            </ul>
+
+            <div class="tp-bannertimer tp-top"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var tpj = jQuery;
+
+        if (tpj.fn.cssOriginal != undefined)
+            tpj.fn.css = tpj.fn.cssOriginal;
+
+        tpj("#sliderlayer11304").revolution(
+        {
+            delay: 9000,
+            startheight: 644,
+            startwidth: 1170,
+
+
+            hideThumbs: 200,
+
+            thumbWidth: 100,
+            thumbHeight: 50,
+            thumbAmount: 5,
+            navigationType: "bullet",
+            navigationArrows: "verticalcentered",
+            navigationStyle: "round",
+
+            navOffsetHorizontal: 0,
+            navOffsetVertical: 20,
+
+            touchenabled: "on",
+            onHoverStop: "on",
+            shuffle: "on",
+            stopAtSlide: -1,
+            stopAfterLoops: -1,
+
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            hideSliderAtLimit: 0,
+            fullWidth: "on",
+            shadow: 0,
+            startWithSlide: 0
+
+        });
+        $(document).ready(function () {
+            $('.caption', $('#sliderlayer11304')).click(function () {
+                if ($(this).data('link') != undefined && $(this).data('link') != '') location.href = $(this).data('link');
+            });
+
+            $('li', $('#sliderlayer11304')).click(function () {
+                if ($(this).data('link') != undefined && $(this).data('link') != '') location.href = $(this).data('link');
+            });
+        });
+
+    </script>
+</div>
+
+
+<section id="columns" class="columns-container">
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <!-- Center -->
+            <section id="center_column" class="col-md-12">
+                <div class="clearfix">
+                    <div class="nopadding margin-70 clearfix">
+
+                        <div class="widget col-lg-4 col-md-4 col-sm-12 col-xs-12 col-sp-12  animation_col_90 animated fadeInLeft" style="animation-delay: 0.3s;">
+                            <div class="widget-html block">
+                                <div class="block_content">
+                                    <div class=" banner-image">
+                                        <div class="top-banner">
+                                            <h6><a href="#">kobold himalaya</a></h6>
+                                            <h4><a href="#">Velit Tor aliquet</a></h4>
+                                            <p>Nam nec tellus a odio dunt auctor</p>
+                                        </div>
+                                        <a href="#">
+                                            <img class="img-responsive" src="~/Template/prestashop/themes/leo_watches/img/modules/leomanagewidgets/home_adv_1.jpg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget col-lg-4 col-md-4 col-sm-12 col-xs-12 col-sp-12  animation_col_91 animated fadeInUp" style="animation-delay: 0.5s;">
+                            <div class="widget-html block">
+                                <div class="block_content">
+                                    <div class=" banner-image">
+                                        <a href="#">
+                                            <img class="img-responsive" src="~/Template/prestashop/themes/leo_watches/img/modules/leomanagewidgets/home_adv_2.jpg" alt=""></a>
+                                        <div class="top-banner">
+                                            <h6><a href="#">kobold himalaya</a></h6>
+                                            <h4><a href="#">Velit Tor aliquet</a></h4>
+                                            <p>Nam nec tellus a odio dunt auctor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget col-lg-4 col-md-4 col-sm-12 col-xs-12 col-sp-12  animation_col_92 animated fadeInRight" style="animation-delay: 1s;">
+                            <div class="widget-html block">
+                                <div class="block_content">
+                                    <div class=" banner-image">
+                                        <div class="top-banner">
+                                            <h6><a href="#">kobold himalaya</a></h6>
+                                            <h4><a href="#">Velit Tor aliquet</a></h4>
+                                            <p>Nam nec tellus a odio dunt auctor</p>
+                                        </div>
+                                        <a href="#">
+                                            <img class="img-responsive" src="~/Template/prestashop/themes/leo_watches/img/modules/leomanagewidgets/home_adv_3.jpg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+               
+
+
+
+                    <div class="row fs-style fs-style1 bg_style_row background_style_46 full-bg-screen" style="background-position: 1407.25px 0px; background-repeat: no-repeat;" data-mouse-parallax-strength="0.5" data-mouse-parallax-axis="axis-x" data-mouse-parallax-rid="mparallax_46">
+
+                        <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sp-12  animation_col_93 animated fadeInUp" style="animation-delay: 0.3s;">
+
+                            <div class="block products_block exclusive leomanagerwidgets">
+                                <h4 class="title_block" style="color: white">
+                                    <span>Latest Watches</span>
+
+                                </h4>
+
+                                <div class="block_content row">
+                                    <div id="leoproductcarousel962" class="owl-carousel owl-theme grid">
+
+                                        <div class="">
+                                            <div class="owl-wrapper" style="width: 1200px; transition: all 800ms ease;">
+
+
+                                                @foreach (var item in Model)
+                                                {
+                   
+                                                    <div class="owl-item" style="width: 232px;">
+                                                        <div class="ajax_block_product">
+
+                                                            <div class="product-container product-block text-center" itemscope="" itemtype="http://schema.org/Product">
+                                                                <div class="left-block">
+                                                                    <div class="product-image-container image ImageWrapper">
+                                                                        <div class=" banner-image">
+                                                                          <a href="@Url.Action("Details", "Home", new { id = item.ProductId })">
+                                                                           
+
+                                                                            <img  class="replace-2x img-responsive" style="height:222px; width:235px" src='~/Images/upload/@item.FileName@item.Extension' border="0" />
+                                                                            <span class="product-additional" data-idproduct="2">
+                                                                               
+                                                                            </span>
+                                                                        </a>
+                                                                            </div>
+
+                                                                      
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <div class="right-block">
+                                                                    <div class="product-meta">
+                                                                        <h4 itemprop="name" class="" style="color:#a59a4c">
+                                                                            
+                                                                                @Html.DisplayFor(modelItem => item.Product.Name)
+                                                                            
+                                                                        </h4>
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- .product-container> -->
+
+
+                                                        </div>
+                                                    </div>
+    
+                             
+                                
+                                                }
+
+
+
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+
+                        </div>
+                    </div>
+                    <div class="row fs-style fs-style2">
+
+                        <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sp-12  animation_col_94 animated fadeInLeft" style="animation-delay: 0.5s;">
+
+                            <!-- Block Newsletter module-->
+
+                            <div id="newsletter_block_left" class="block inline">
+                                <h4 class="title_block"><span>Join Our Newsletter</span> <em>Newsletters include seasonal  wine updates &amp; events for scene.</em></h4>
+                                <div class="block_content">
+
+                                    <form action="" method="post">
+                                        <div class="form-group">
+                                            <input class="inputNew form-control grey newsletter-input" id="newsletter-input" type="text" name="email" size="18" value="Enter your e-mail">
+                                            <input type="submit" value="Subscribe" class="button_mini btn btn-outline-inverse" name="submitNewsletter">
+                                            <input type="hidden" name="action" value="0">
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <!-- /Block Newsletter module-->
+                        </div>
+                      
+                    </div>
+                    <div class="nopadding margin-70 clearfix hook-bottom">
+
+                        <div class="widget col-lg-12 col-md-12 col-sm-12 col-xs-12 col-sp-12  animation_col_96 animated zoomIn" style="animation-delay: 1.5s;">
+
+                            <!-- MODULE Block blockleoblogstabs -->
+                            <div id="blockleoblogstabs" class="icenter blogs block">
+                                <h4 class="title_block"><span>From Our Blog</span><br>
+                                    <em>Perennial Favorites from Every Category</em></h4>
+                                <div class="block_content">
+                                    <div class="carousel slide" id="blockleoblogs">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="i-blog clearfix  blog_block ajax_block_blog first_item">
+                                                    <div class="content">
+                                                        <h5 class="blog-title"><a href="blog/nullam-ullamcorper-nisl-quis-ornare-molestie-b9.html" title="Nullam ullamcorper nisl quis ornare molestie">Nullam ullamcorper nisl quis ornare molestie</a></h5>
+
+                                                        <div class="blog-meta">
+
+
+                                                            <span class="blog-created">
+                                                                <span class="fa fa-clock-o"></span>18 - 12 - 2013
+                                                            </span>
+
+
+
+                                                            <span class="blog-ctncomment">
+                                                                <span class="fa fa-comment">Comment:</span> 0
+                                                            </span>
+
+
+                                                        </div>
+
+                                                        <div class="blog-shortinfo">
+
+                                                            <p>
+                                                                Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam risus, sit amet dictum ligula lorem non nisl. Ut vitae nibh id massa vulputate euismod ut quis justo. Ut bibendum sem at massa lacinia, eget elementum ante consectetur. Nulla...
+								   						 
+                                                            </p>
+                                                        </div>
+                                                        <div class="btn-readmore">
+                                                            <a href="blog/nullam-ullamcorper-nisl-quis-ornare-molestie-b9.html" title="Nullam ullamcorper nisl quis ornare molestie" class="btn btn-default">Read more</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="image">
+                                                        <img src="~/Template/prestashop/img/leoblog/b/9/585_336/b-blog-7.jpg" title="Nullam ullamcorper nisl quis ornare molestie" class="img-responsive" alt="Nullam ullamcorper nisl quis ornare molestie">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="i-blog clearfix  blog_block ajax_block_blog ">
+                                                    <div class="content">
+                                                        <h5 class="blog-title"><a href="blog/turpis-at-eleifend-leo-mi-elit-aenean-porta-ac-sed-faucibus-b8.html" title="Turpis at eleifend leo mi elit Aenean porta ac sed faucibus">Turpis at eleifend leo mi elit Aenean porta ac sed faucibus</a></h5>
+
+                                                        <div class="blog-meta">
+
+
+                                                            <span class="blog-created">
+                                                                <span class="fa fa-clock-o"></span>18 - 12 - 2013
+                                                            </span>
+
+
+
+                                                            <span class="blog-ctncomment">
+                                                                <span class="fa fa-comment">Comment:</span> 0
+                                                            </span>
+
+
+                                                        </div>
+
+                                                        <div class="blog-shortinfo">
+
+                                                            <p>Turpis at eleifend leo mi elit Aenean porta ac sed faucibus. Nunc urna Morbi fringilla vitae orci convallis condimentum auctor sit dui. Urna pretium elit mauris cursus Curabitur at elit Vestibulum</p>
+
+                                                        </div>
+                                                        <div class="btn-readmore">
+                                                            <a href="blog/turpis-at-eleifend-leo-mi-elit-aenean-porta-ac-sed-faucibus-b8.html" title="Turpis at eleifend leo mi elit Aenean porta ac sed faucibus" class="btn btn-default">Read more</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="image">
+                                                        <img src="~/Template/prestashop/img/leoblog/b/8/585_336/b-blog-6.jpg" title="Turpis at eleifend leo mi elit Aenean porta ac sed faucibus" class="img-responsive" alt="Turpis at eleifend leo mi elit Aenean porta ac sed faucibus">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="i-blog clearfix  blog_block ajax_block_blog last_item">
+                                                    <div class="content">
+                                                        <h5 class="blog-title"><a href="blog/morbi-condimentum-molestie-nam-enim-odio-sodales-b7.html" title="Morbi condimentum molestie Nam enim odio sodales">Morbi condimentum molestie Nam enim odio sodales</a></h5>
+
+                                                        <div class="blog-meta">
+
+
+                                                            <span class="blog-created">
+                                                                <span class="fa fa-clock-o"></span>18 - 12 - 2013
+                                                            </span>
+
+
+
+                                                            <span class="blog-ctncomment">
+                                                                <span class="fa fa-comment">Comment:</span> 0
+                                                            </span>
+
+
+                                                        </div>
+
+                                                        <div class="blog-shortinfo">
+
+                                                            <p>Sed mauris Pellentesque elit Aliquam at lacus interdum nascetur elit ipsum. Enim ipsum hendrerit Suspendisse turpis laoreet fames tempus ligula pede ac. Et Lorem penatibus orci eu ultrices egestas Nam quam Vivamus nibh.</p>
+
+                                                        </div>
+                                                        <div class="btn-readmore">
+                                                            <a href="blog/morbi-condimentum-molestie-nam-enim-odio-sodales-b7.html" title="Morbi condimentum molestie Nam enim odio sodales" class="btn btn-default">Read more</a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="image">
+                                                        <img src="~/Template/prestashop/img/leoblog/b/7/585_336/b-blog-5.jpg" title="Morbi condimentum molestie Nam enim odio sodales" class="img-responsive" alt="Morbi condimentum molestie Nam enim odio sodales">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /MODULE Block blockleoblogstabs -->
+                            <script type="text/javascript">
+
+                                $(document).ready(function () {
+                                    $('#blockleoblogs').each(function () {
+                                        $(this).carousel({
+                                            pause: 'hover',
+                                            interval: 80000
+                                        });
+                                    });
+                                });
+
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+    </div>
+</section>
+
+<div style="background-image: url(../Images/Background/style-3.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" data-wow-delay="0.2s">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#quote-carousel" data-slide-to="0" class="active">
+                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="1">
+                            <img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="2">
+                            <img class="img-responsive" src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="">
+                        </li>
+                    </ol>
+
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner text-center">
+
+                        <!-- Quote 1 -->
+                        <div class="item active">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 2 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 3 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Buttons Next/Prev -->
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts {
+
+    <script>
+        $('.mDetails').click(function (e) {
+            e.preventDefault();
+            var $ctrl = $(this);
+            if (confirm('Do you really want to delete this item?')) {
+                $.ajax({
+                    url: '@Url.Action("ProductDetails")',
+                    type: 'POST',
+                    data: { id: $(this).data('id') }
+                }).done(function (data) {
+                    if (data.Result == "OK") {
+                        $ctrl.closest('tr').remove();
+                    }
+                    else if (data.Result.Message) {
+                        alert(data.Result.Message);
+                    }
+                }).fail(function () {
+                    alert("There is something wrong. Please try again.");
+                })
+
+            }
+        });
+
+
+    </script>
+}

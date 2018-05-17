@@ -1,0 +1,216 @@
+﻿@*@model IEnumerable<Watch.Models.MainImage>*@
+
+@using PagedList
+@using PagedList.Mvc
+@model IPagedList<Watch.Models.MainImage>
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+    //Layout = null;
+}
+
+<style>
+    @@media only screen and (max-width: 750px) {
+   .m-hide{ display: none !important; }
+}
+
+</style>
+
+<link href="~/Content/autocomplete/jquery-ui.css" rel="stylesheet" />
+<script src="~/Content/autocomplete/jquery-1.12.4.js"></script>
+<script src="~/Content/autocomplete/jquery-ui.js"></script>
+
+
+<script src="@Url.Content("~/Scripts/autocomplete/autocomplete.js")" type="text/javascript"></script>
+
+
+
+<section id="columns" class="columns-container">
+    <div id="breadcrumb" class="clearfix">
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumb clearfix">
+                <a class="home" href="~/Home/Index" title="Return to Home"><span itemprop="title">Home</span></a>
+                >>
+                Product
+            </div>
+            <!-- /Breadcrumb -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+          
+            <!-- Center -->
+            <section id="center_column" class="col-md-12">
+    
+                <!-- Subcategories -->
+
+                @using (@Html.BeginForm("Product", "Home"))
+                {
+                    <div class="content_sortPagiBar clearfix">
+                        <div class="sortPagiBar clearfix row">
+                            <div class="col-md-8 col-sm-6 col-xs-6">
+                                <div class="sort">
+
+                                    <div class="col-md-4 col-sm-4 col-xs-4 m-hide">
+                                        @Html.DropDownList("CategoryList", (SelectList)(ViewData["CategoryList"]), "Select Watch ID")
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-3 col-xs-3 m-hide">
+                                        @Html.DropDownList("Value", new SelectListItem[] 
+                                                       { new SelectListItem() { Text = "-- Select Category --", Value = "" }, 
+                                                         new SelectListItem() { Text = "Men's", Value = "0" }, 
+                                                         new SelectListItem() { Text = "Lady's", Value = "1" },
+                                                         new SelectListItem() { Text = "Chronograph", Value = "2" },
+                                                         new SelectListItem() { Text = "Sport", Value = "3" }}
+                                                        , new { @class = "form-control" })
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="product-compare col-md-4 col-sm-6 col-xs-12">
+                                @Html.TextBox("SearchTerm", null, new { id = "txtSearch", @class = "form-control" ,data_autocomplete_url = Url.Action("Autocomplete")})
+                                <input type="submit" class="btn btn-success" value="Search" />
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+                <!-- Products list -->
+                <div class="product_list grid row " style="opacity: 1;">
+                    @foreach (var item in Model)
+                    {
+                        <div class="ajax_block_product col-sp-12 col-xs-12 col-sm-6 col-md-3  last-line first-item-of-tablet-line last-item-of-mobile-line">
+
+                            <div class="product-container product-block text-center" itemscope="" itemtype="http://schema.org/Product">
+                                <div class="left-block">
+                                    <div class="product-image-container image ImageWrapper">
+                                        <div class=" banner-image col-md-12 col-xm-6">
+                                            <a href="@Url.Action("Details", "Home", new { id = item.ProductId })">
+
+
+                                                <img  class="replace-2x img-responsive" src='~/Images/upload/@item.FileName@item.Extension' border="0" />
+                                                <span class="product-additional" data-idproduct="2"></span>
+                                            </a>
+                                               
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                </div>
+                                <div class="right-block" style="text-align:center;">
+                                    <div class="product-meta">
+                                        <h4 itemprop="name" class="" style="color: #a59a4c; ">
+
+                                            @Html.DisplayFor(modelItem => item.Product.Name)
+
+                                        </h4>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- .product-container> -->
+
+
+                        </div>@*
+                               
+                            
+                                
+                           
+                                @Html.DisplayFor(modelItem => item.Description)
+                            
+                                @Html.DisplayFor(modelItem => item.Category)
+
+                        
+                          
+                    }*@
+
+                    }
+
+
+
+                </div>
+
+
+
+                <div class="content_sortPagiBar">
+                    <div class="bottom-pagination-content clearfix row">
+                        <div class="col-md-10 col-sm-8 col-xs-6">
+
+
+                            <!-- Pagination -->
+                            <div id="pagination_bottom" class="pagination clearfix">
+                                <div class="product-count pull-left">
+                                    <div class="pagedList">
+                                        @Html.PagedListPager(Model, page => Url.Action("Product", new { page }), PagedListRenderOptions.PageNumbersOnly)
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <!-- /Pagination -->
+
+                        </div>
+                        <div class="product-compare col-md-2 col-sm-4 col-xs-6">
+                            <form method="post" action="http://demo4leotheme.com/prestashop/leo_fitness_stone_demo/en/products-comparison" class="compare-form">
+                                <button type="submit" class="btn btn-outline button button-medium bt_compare bt_compare_bottom" disabled="disabled">
+                                    <span>Compare (<strong class="total-compare-val">0</strong>)</span>
+                                </button>
+                                <input type="hidden" name="compare_product_count" class="compare_product_count" value="0">
+                                <input type="hidden" name="compare_product_list" class="compare_product_list" value="">
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+
+    <script>
+        $('.deleteItem').click(function (e) {
+            e.preventDefault();
+            var $ctrl = $(this);
+
+            $.ajax({
+                url: '@Url.Action("ProductCategory")',
+                    type: 'POST',
+                    data: { id: $(this).data('id') }
+                }).done(function (data) {
+                    //if (data.Result == "OK") {
+                    //    $ctrl.closest('tr').remove();
+                    //}
+                    //else if (data.Result.Message) {
+                    //    alert(data.Result.Message);
+                    //}
+                }).fail(function () {
+                    alert("There is something wrong. Please try again.");
+                })
+
+
+        });
+
+
+    </script>
+
+}
+
+
+

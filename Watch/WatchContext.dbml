@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="aspnet-Watch-back" Class="WatchContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=G3PC4\SQLEXPRESS;Initial Catalog=aspnet-Watch-back;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="aspnet_Watch_backConnectionString" Provider="System.Data.SqlClient" />
+</Database>
